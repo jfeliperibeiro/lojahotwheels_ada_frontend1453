@@ -1,0 +1,847 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  height: 80vh;
+  background: url('/imagens/hotwheels_background.webp') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* opcional: mantém o fundo fixo ao rolar */
+}
+
+.imagem-reduzida {
+  width: 300px;
+  height: auto;
+}
+
+h1 , h2{
+  color: #333;
+  text-align: center;
+}
+
+h4 {
+  color: #0f0f0f;
+  text-align: center;
+}
+
+
+
+img {
+  width: 70%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+
+
+
+label {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+
+}
+
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 140px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+
+}
+
+table th {
+  background: #007bff;
+  color: #fff;
+}
+
+
+
+.menu {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+.linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* espaço entre os elementos */
+  flex-wrap: wrap;
+  /* permite quebra de linha se necessário */
+  margin-bottom: 20px;
+}
+
+.linha label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+ .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 80px;
+        margin-top: 60px;
+      }
+
+      .produto {
+        background: #fff;
+        border: 2px solid #131212;
+        border-radius: 20px;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .produto img {
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .produto h3 {
+        margin: 10px 0 5px;
+      }
+
+      .produto p {
+        font-weight: bold;
+        color: #27ae60;
+      }
+
+      .menu {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .menu a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+
+      .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #CD313E;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0509fc;
+}
+
+
+    
+.rodape {
+   background-color: rgba(255, 255, 255, 0.9); /* branco com 90% de opacidade */
+   width: 80%;
+ /* height: 300px;
+   display: flex;*/
+   justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ .conteudo {
+    display: flex;
+    gap: 10px;
+}
+
+ .links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .links img {
+      width: 24px;
+      height: 24px;
+    }
+
+
+@media (max-width: 768px) { /* Você pode ajustar o '768px' para a largura que considerar "celular" */
+  .links {
+    flex-direction: column; /* Faz com que os itens se empilhem verticalmente */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    /* Remove gap, pois cada item terá seu próprio margin-bottom */
+    gap: 0; 
+    
+  }
+
+  .links a {
+    width: 80%; /* Faz cada link ocupar a maior parte da largura em mobile */
+    max-width: 300px; /* Limita a largura máxima para não ficar muito largo em tablets */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo de cada link */
+    justify-content: flex-start;  /*Alinha o conteúdo de cada link à esquerda */
+    align-items: center;
+  }
+
+  .links a:last-child {
+    margin-bottom: 0; /* Remove o margin-bottom do último link para evitar espaço extra */
+  }
+}    
+
+
+.caixalogo {
+  /*width: 1000px;*/
+  margin: 10px auto;
+  padding: 1px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.caixa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.caixa .btn {
+  padding: 10px 20px;
+  background-color: #3802fc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  flex: 1 1 45%; /* ocupa cerca de metade da linha */
+  text-align: center;
+}
+
+.caixa .btn:hover {
+  background-color: #ff000d;
+}
+
+/* Estilo para telas maiores */
+@media (min-width: 600px) {
+  .caixa .btn {
+    flex: 0 1 auto;
+  }
+}
+
+
+form {
+  background-color: rgba(255, 255, 255, 0.5); /* branco com 50% de opacidade */
+ 
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Limpeza: Remove estilos inline para que o CSS assuma o controle */
+#formulario input[style],
+#formulario label[style] {
+    width: auto !important;
+}
+
+/* Estilos gerais do Formulário */
+#formulario {
+    display: flex; /* Torna o formulário um container flexível */
+    flex-wrap: wrap; /* Permite que os campos quebrem para a próxima linha */
+    gap: 20px; /* Espaço entre os grupos de campos */
+    padding: 20px;
+    max-width: 900px; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+    background-color: #fefefe; /* Fundo do formulário */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos para cada grupo de campo (label + input) */
+.form-field {
+    display: flex;
+    flex-direction: column; /* Label acima do input */
+    /* Configuração flex-basis para controle de largura padrão em telas maiores */
+    flex: 1 1 calc(50% - 10px); /* 50% da largura do pai, menos metade do gap */
+    min-width: 250px; /* Largura mínima antes de quebrar para nova linha */
+}
+
+.form-field label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="password"],
+.form-field input[type="tel"],
+.form-field input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+    width: 100%; /* Ocupa 100% da largura do seu .form-field pai */
+    font-size: 1em;
+}
+
+/* Classes específicas para controlar larguras de campos */
+.form-field.full-width {
+    flex: 1 1 100%; /* Ocupa 100% da largura disponível */
+}
+
+.form-field.half-width {
+    flex: 1 1 calc(50% - 10px); /* Ocupa 50% da largura, permitindo dois por linha */
+}
+
+/* Estilos para linhas de campos (como Telefone/Data de Nasc., etc.) */
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos dentro da linha quebrem */
+    gap: 20px; /* Espaço entre os campos dentro da linha */
+    flex: 1 1 100%; /* Garante que a linha ocupe toda a largura do formulário */
+}
+
+.form-row .form-field {
+    flex: 1 1 calc(50% - 10px); /* Padrão de dois campos por linha */
+    min-width: 150px; /* Reduzido para campos menores */
+}
+
+/* Ajustes de largura para campos específicos dentro das form-rows */
+.form-row .form-field.small-input {
+    flex: 0 1 calc(30% - 10px); /* Ex: CEP, Estado */
+    min-width: 120px;
+}
+.form-row .form-field.tiny-input {
+    flex: 0 1 calc(15% - 10px); /* Ex: Número */
+    min-width: 80px;
+}
+.form-row .form-field.medium-input {
+    flex: 0 1 calc(55% - 10px); /* Ex: Complemento */
+    min-width: 180px;
+}
+.form-row.three-cols .form-field {
+    flex: 1 1 calc(33.33% - 14px); /* Para três colunas (ex: CEP, Num, Comp) */
+    min-width: 100px; /* Ajuste se necessário */
+}
+
+/* Estilos para Gênero (Radio Buttons) */
+.radio-group {
+    flex: 1 1 100%; /* Ocupa toda a largura da linha */
+}
+
+.radio-group .radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Espaço entre as opções de rádio */
+    margin-top: 5px;
+}
+
+.radio-group label { /* Estilo das labels dos rádios */
+    font-weight: normal; /* Sobrescreve o negrito padrão */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Estilos para os Botões de Ação */
+.form-actions {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Linha divisória acima dos botões */
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-actions button[type="reset"] {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+
+.form-actions button[type="reset"]:hover {
+    background-color: #da190b;
+}
+
+
+
+
+/* Adicione esta regra específica para a linha de três colunas */
+.form-row.three-cols-group .form-field {
+    flex: 1 1 calc(33.33% - 14px); /* Tenta dividir em 3 colunas, considerando o gap */
+    min-width: 150px; /* Largura mínima para cada campo antes de quebrar */
+}
+
+/* Opcional: Ajuste se o radio-group não estiver se comportando bem */
+/* Certifique-se de que o radio-group dentro de three-cols-group se ajusta corretamente */
+.form-row.three-cols-group .radio-group {
+    /* Por padrão, .radio-group já era full-width. Aqui ele precisa se comportar como uma coluna das 3 */
+    flex: 1 1 calc(33.33% - 14px); /* Sobrescreve o flex: 1 1 100% do .radio-group genérico */
+    min-width: 150px;
+}
+
+
+/* === REVISÃO DA MEDIA QUERY === */
+/* Certifique-se de que a media query existente já lida com isso.
+   O código abaixo é do nosso CSS anterior, e ele já deve ser suficiente
+   para fazer a quebra em telas pequenas. */
+@media (max-width: 768px) {
+    #formulario {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Isso garante que todos os form-fields e form-rows se empilhem em mobile */
+    .form-field,
+    .form-row,
+    .form-row .form-field {
+        flex-basis: 100%;
+        min-width: unset;
+    }
+
+    /* Regras específicas para o radio-group no mobile, se necessário.
+       Normalmente, o .radio-options já lida com o empilhamento interno. */
+    .radio-group .radio-options {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    /* ... outras regras para botões, etc. ... */
+}
+
+/* Classe para alinhar a segunda coluna de uma tabela à esquerda.*/
+.align-second-column-left th:nth-child(2),
+.align-second-column-left td:nth-child(2) {
+    text-align: left;
+}
+
+
+ /* Estilos para o carrinho */
+  #cart-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #cart-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  #cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  #cart-table th,
+  #cart-table td {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+  }
+
+  #cart-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+  }
+
+  #cart-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .quantity-controls button {
+    background-color: #6c757d; /* Cinza */
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  .quantity-controls button:hover {
+    background-color: #5a6268;
+  }
+
+  .remove-item-btn {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .remove-item-btn:hover {
+    background-color: #c82333;
+  }
+
+  #cart-total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .cart-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #clear-cart-btn {
+    background-color: #ffc107; /* Amarelo */
+    color: #333;
+  }
+
+  #clear-cart-btn:hover {
+    background-color: #e0a800;
+  }
+
+  #send-whatsapp-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+  }
+
+  #send-whatsapp-btn:hover {
+    background-color: #218838;
+  }
+
+  #back-to-catalog-btn {
+    background-color: #6c757d; /* Cinza */
+    color: white;
+  }
+
+  #back-to-catalog-btn:hover {
+    background-color: #5a6268;
+  }
+
+  /* Responsividade */
+  @media (max-width: 600px) {
+    #cart-table thead {
+      display: none; /* Esconde cabeçalho da tabela em mobile */
+    }
+
+    #cart-table,
+    #cart-table tbody,
+    #cart-table tr,
+    #cart-table td {
+      display: block;
+      width: 100%;
+    }
+
+    #cart-table tr {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    #cart-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    #cart-table td::before {
+      content: attr(data-label); /* Usa o data-label para exibir o cabeçalho da coluna */
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 20px);
+      text-align: left;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .cart-actions {
+      flex-direction: column;
+    }
+
+    .cart-actions button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+
+ /* projeto_final_avaliacao */
+
+    /* Estilos gerais do formulário de avaliação */
+    .evaluation-form-container {
+        padding: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fefefe;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .evaluation-form-container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+    }
+
+    .evaluation-form-container p {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    /* Estilos para cada item de avaliação */
+    .evaluation-item {
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .evaluation-item h3 {
+        margin: 0 0 5px 0;
+        color: #007bff; /* Azul */
+        font-size: 1.2em;
+    }
+
+    .evaluation-item label {
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .evaluation-item textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; /* Inclui padding e borda na largura */
+        min-height: 70px;
+        resize: vertical; /* Permite redimensionar verticalmente */
+        font-size: 0.95em;
+    }
+
+    .evaluation-item .score-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .evaluation-item input[type="range"] {
+        flex-grow: 1; /* Ocupa o máximo de espaço possível */
+        -webkit-appearance: none; /* Remove estilo padrão do navegador */
+        width: 100%; /* Largura total */
+        height: 8px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity .2s;
+        border-radius: 5px;
+    }
+
+    .evaluation-item input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #007bff; /* Azul */
+        cursor: pointer;
+    }
+
+    .evaluation-item input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #007bff; /* Azul */
+        cursor: pointer;
+    }
+
+    .evaluation-item .score-value {
+        font-weight: bold;
+        color: #007bff;
+        min-width: 40px; /* Garante que o número não se comprima */
+        text-align: right;
+    }
+
+    /* Seção de Total e Botões */
+    .evaluation-summary {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: right;
+    }
+
+    .evaluation-summary h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .evaluation-summary .average-score {
+        font-size: 2em;
+        font-weight: bold;
+        color: #28a745; /* Verde */
+        margin-top: 10px;
+        display: block; /* Para o score ir para a próxima linha */
+    }
+
+    .evaluation-buttons {
+        display: flex;
+        justify-content: flex-end; /* Alinha os botões à direita */
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .evaluation-buttons button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .evaluation-buttons button[type="submit"] {
+        background-color: #28a745; /* Verde */
+        color: white;
+    }
+
+    .evaluation-buttons button[type="submit"]:hover {
+        background-color: #218838;
+    }
+
+    .evaluation-buttons button[type="reset"] {
+        background-color: #dc3545; /* Vermelho */
+        color: white;
+    }
+
+    .evaluation-buttons button[type="reset"]:hover {
+        background-color: #c82333;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .evaluation-form-container {
+            padding: 15px;
+            margin: 10px;
+        }
+        .evaluation-item .score-control {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .evaluation-item input[type="range"] {
+            width: calc(100% - 45px); /* Ajusta a largura da régua para dar espaço ao valor */
+        }
+        .evaluation-buttons {
+            flex-direction: column;
+            align-items: stretch; /* Estica os botões para largura total */
+        }
+        .evaluation-buttons button {
+            width: 100%;
+        }
+        .evaluation-summary {
+            text-align: center; /* Centraliza em mobile */
+        }
+    }
