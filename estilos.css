@@ -517,7 +517,7 @@ form {
   #cart-table th,
   #cart-table td {
     border: 1px solid #eee;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
   }
 
@@ -532,7 +532,7 @@ form {
   }
 
   .quantity-controls button {
-    background-color: #6c757d; /* Cinza */
+    background-color: transparent; 
     color: white;
     border: none;
     padding: 5px 8px;
@@ -550,7 +550,7 @@ form {
     background-color: #dc3545; /* Vermelho */
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -610,7 +610,6 @@ form {
   #back-to-catalog-btn:hover {
     background-color: #5a6268;
   }
-
   /* Responsividade Carrinho de Compras */
   @media (max-width: 600px) {
     #cart-table thead {
@@ -845,6 +844,7 @@ form {
             text-align: center; /* Centraliza em mobile */
         }
     }
+
 
 
 
