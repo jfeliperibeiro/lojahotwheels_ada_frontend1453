@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 30px;
   height: 80vh;
-  background: url('/imagens/fundo.jpg') no-repeat center center;
+  background: url('/lojahotwheels_ada_frontend1453/imagens/fundo.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* opcional: mantém o fundo fixo ao rolar */
 }
@@ -845,5 +845,6 @@ form {
             text-align: center; /* Centraliza em mobile */
         }
     }
+
 
 
