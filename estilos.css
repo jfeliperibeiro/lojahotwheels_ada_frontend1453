@@ -611,10 +611,10 @@ form {
     background-color: #5a6268;
   }
 
-  /* Responsividade */
+  /* Responsividade Carrinho de Compras */
   @media (max-width: 600px) {
     #cart-table thead {
-      display: none; /* Esconde cabeçalho da tabela em mobile */
+      /*display: none; Esconde cabeçalho da tabela em mobile */
     }
 
     #cart-table,
@@ -622,12 +622,12 @@ form {
     #cart-table tr,
     #cart-table td {
       display: block;
-      width: 100%;
+      width: 85%;
     }
 
     #cart-table tr {
       margin-bottom: 15px;
-      border: 1px solid #ddd;
+      border: 0px solid #ddd;
       border-radius: 5px;
       padding: 10px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -845,6 +845,7 @@ form {
             text-align: center; /* Centraliza em mobile */
         }
     }
+
 
 
 
