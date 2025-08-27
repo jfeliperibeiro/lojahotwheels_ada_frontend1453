@@ -45,13 +45,13 @@ function setupCadastroFormListeners() {
 
               if (rua) rua.value = data.logradouro;
               else console.warn('Campo #rua não encontrado no cadastro.html.');
-              
+
               if (bairro) bairro.value = data.bairro;
               else console.warn('Campo #bairro não encontrado no cadastro.html.');
 
               if (cidade) cidade.value = data.localidade;
               else console.warn('Campo #cidade não encontrado no cadastro.html.');
-              
+
               if (estado) estado.value = data.uf;
               else console.warn('Campo #estado não encontrado no cadastro.html.');
 
@@ -85,12 +85,12 @@ function setupCadastroFormListeners() {
       const nome = getInputValue("nome");
       const cpf = getInputValue("cpf");
       const email = getInputValue("email");
-      const senha =  '###########'; // getInputValue("senha");
+      const senha = '###########'; // getInputValue("senha");
       const telefone = getInputValue("telefone");
       const dt_nasc = getInputValue("dt_nasc");
       const rua = getInputValue("rua");
       const nr = getInputValue("numero");
-      const complemento = getInputValue("complemento"); 
+      const complemento = getInputValue("complemento");
       const bairro = getInputValue("bairro");
       const cidade = getInputValue("cidade");
       const estado = getInputValue("estado");
@@ -100,20 +100,20 @@ function setupCadastroFormListeners() {
       console.log("Gênero selecionado:", generoSelecionado);
 
       const textoCru = `Olá! Eu tenho interesse em me cadastrar na loja.\n\n` +
-                       `Meu nome é ${nome}\n` +
-                       `CPF: ${cpf}\n` +
-                       `Email: ${email}\n` +
-                       `Senha: ${senha}\n` +
-                       `Gênero: ${generoSelecionado}\n` +
-                       `Telefone: ${telefone}\n` +
-                       `Data de Nascimento: ${dt_nasc}\n` +
-                       `Rua: ${rua}\n` +
-                       `Número: ${nr}\n` +
-                       `Complemento: ${complemento}\n` +
-                       `Bairro: ${bairro}\n` +
-                       `Cidade: ${cidade}\n` +
-                       `Estado: ${estado}`;
-      
+        `Meu nome é ${nome}\n` +
+        `CPF: ${cpf}\n` +
+        `Email: ${email}\n` +
+        `Senha: ${senha}\n` +
+        `Gênero: ${generoSelecionado}\n` +
+        `Telefone: ${telefone}\n` +
+        `Data de Nascimento: ${dt_nasc}\n` +
+        `Rua: ${rua}\n` +
+        `Número: ${nr}\n` +
+        `Complemento: ${complemento}\n` +
+        `Bairro: ${bairro}\n` +
+        `Cidade: ${cidade}\n` +
+        `Estado: ${estado}`;
+
       const textoFormatadoParaURL = encodeURIComponent(textoCru);
 
       const numero = "5511976561347";
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
   incluirCabecalhoRodape();
 
   // Carrega o catálogo como página inicial, já que removemos o onload do body
-  carregarPagina('catalogo.html'); 
+  carregarPagina('catalogo.html');
 });
 
 
@@ -256,20 +256,20 @@ function setupCadastroFormListeners() {
       console.log("Gênero selecionado:", generoSelecionado);
 
       const textoCru = `Olá! Eu tenho interesse em me cadastrar na loja.\n\n` +
-                       `Meu nome é ${nome}\n` +
-                       `CPF: ${cpf}\n` +
-                       `Email: ${email}\n` +
-                       `Senha: ${senha}\n` +
-                       `Gênero: ${generoSelecionado}\n` +
-                       `Telefone: ${telefone}\n` +
-                       `Data de Nascimento: ${dt_nasc}\n` +
-                       `Rua: ${rua}\n` +
-                       `Número: ${nr}\n` +
-                       `Complemento: ${complemento}\n` +
-                       `Bairro: ${bairro}\n` +
-                       `Cidade: ${cidade}\n` +
-                       `Estado: ${estado}`;
-      
+        `Meu nome é ${nome}\n` +
+        `CPF: ${cpf}\n` +
+        `Email: ${email}\n` +
+        `Senha: ${senha}\n` +
+        `Gênero: ${generoSelecionado}\n` +
+        `Telefone: ${telefone}\n` +
+        `Data de Nascimento: ${dt_nasc}\n` +
+        `Rua: ${rua}\n` +
+        `Número: ${nr}\n` +
+        `Complemento: ${complemento}\n` +
+        `Bairro: ${bairro}\n` +
+        `Cidade: ${cidade}\n` +
+        `Estado: ${estado}`;
+
       const textoFormatadoParaURL = encodeURIComponent(textoCru);
 
       const numero = "5511976561347";
@@ -307,8 +307,8 @@ function renderCartTable() {
   const emptyMessage = document.getElementById('empty-cart-message');
 
   if (!tableBody || !cartTotalDisplay) {
-      console.warn("Elementos do carrinho não encontrados. Certifique-se de estar na página carrinho.html.");
-      return;
+    console.warn("Elementos do carrinho não encontrados. Certifique-se de estar na página carrinho.html.");
+    return;
   }
 
   tableBody.innerHTML = ''; // Limpa a tabela antes de renderizar
@@ -494,95 +494,95 @@ document.addEventListener('DOMContentLoaded', function () {
 // ===========================================
 
 function setupProjectEvaluationForm() {
-    const form = document.getElementById('project-evaluation-form');
-    if (!form) {
-        console.warn('Formulário de avaliação do projeto final não encontrado.');
-        return;
-    }
+  const form = document.getElementById('project-evaluation-form');
+  if (!form) {
+    console.warn('Formulário de avaliação do projeto final não encontrado.');
+    return;
+  }
 
-    const scoreInputs = form.querySelectorAll('input[type="range"]');
-    const scoreOutputs = form.querySelectorAll('.score-value');
-    const finalAverageScoreDisplay = document.getElementById('final-average-score');
+  const scoreInputs = form.querySelectorAll('input[type="range"]');
+  const scoreOutputs = form.querySelectorAll('.score-value');
+  const finalAverageScoreDisplay = document.getElementById('final-average-score');
 
-    // Função para atualizar o valor exibido ao lado da régua
-    function updateScoreDisplay(input, output) {
-        output.textContent = input.value;
-        calculateFinalAverage();
-    }
-
-    // Função para calcular e exibir a média final
-    function calculateFinalAverage() {
-        let totalScore = 0;
-        scoreInputs.forEach(input => {
-            totalScore += parseInt(input.value);
-        });
-        const average = scoreInputs.length > 0 ? (totalScore / scoreInputs.length).toFixed(2) : '0.00';
-        finalAverageScoreDisplay.textContent = average;
-    }
-
-    // Adiciona event listeners para cada régua de pontuação
-    scoreInputs.forEach((input, index) => {
-        // Atualiza o display ao mover a régua
-        input.addEventListener('input', () => updateScoreDisplay(input, scoreOutputs[index]));
-        // Atualiza o display e a média ao carregar (se houver valores pré-definidos)
-        updateScoreDisplay(input, scoreOutputs[index]); // Para exibir o valor inicial (0)
-    });
-
-    // Event listener para o envio do formulário (WhatsApp)
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Impede o envio padrão do formulário
-
-        let message = "Avaliação do Projeto Final:\n\n";
-        let totalScoreForWhatsapp = 0;
-
-        const criteria = [
-            "1. Título e Descrição da Página",
-            "2. Estrutura dos Produtos (Imagem, Nome, Descrição)",
-            "3. Uso de HTML Semântico e Navegação",
-            "4. Tabela de Preços ou Funcionalidade Equivalente",
-            "5. Formulário de Cadastro",
-            "6. Otimização para SEO e Acessibilidade",
-            "7. Estilização e Responsividade",
-            "8. Qualidade e Estrutura do Código"
-        ];
-
-        scoreInputs.forEach((input, index) => {
-            const score = input.value;
-            const commentId = input.id.replace('_score', '_comment');
-            const commentElement = document.getElementById(commentId);
-            const comment = commentElement ? commentElement.value.trim() : "Nenhum comentário.";
-
-            totalScoreForWhatsapp += parseInt(score);
-
-            message += `${criteria[index]}:\n`;
-            message += `   Pontuação: ${score}/100\n`;
-            message += `   Comentários: ${comment || "Nenhum."}\n\n`; // Adiciona "Nenhum" se o comentário estiver vazio
-        });
-
-        const finalAverage = (totalScoreForWhatsapp / criteria.length).toFixed(2);
-        message += `Média Final do Projeto: ${finalAverage}\n\n`;
-        message += "Avaliação enviada via formulário digital.";
-
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = "5511976561347"; // **Mude para o seu número de WhatsApp**
-
-        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-        window.open(whatsappLink, '_blank');
-    });
-
-    // Event listener para o botão de limpar formulário
-    form.addEventListener('reset', function () {
-        // Delay para permitir que o reset padrão do input[type="range"] ocorra
-        setTimeout(() => {
-            scoreInputs.forEach((input, index) => {
-                updateScoreDisplay(input, scoreOutputs[index]);
-            });
-            calculateFinalAverage();
-        }, 50); // Pequeno atraso para garantir que os valores padrão sejam carregados antes de recalcular
-    });
-
-    // Calcula a média inicial ao carregar o formulário
+  // Função para atualizar o valor exibido ao lado da régua
+  function updateScoreDisplay(input, output) {
+    output.textContent = input.value;
     calculateFinalAverage();
+  }
+
+  // Função para calcular e exibir a média final
+  function calculateFinalAverage() {
+    let totalScore = 0;
+    scoreInputs.forEach(input => {
+      totalScore += parseInt(input.value);
+    });
+    const average = scoreInputs.length > 0 ? (totalScore / scoreInputs.length).toFixed(2) : '0.00';
+    finalAverageScoreDisplay.textContent = average;
+  }
+
+  // Adiciona event listeners para cada régua de pontuação
+  scoreInputs.forEach((input, index) => {
+    // Atualiza o display ao mover a régua
+    input.addEventListener('input', () => updateScoreDisplay(input, scoreOutputs[index]));
+    // Atualiza o display e a média ao carregar (se houver valores pré-definidos)
+    updateScoreDisplay(input, scoreOutputs[index]); // Para exibir o valor inicial (0)
+  });
+
+  // Event listener para o envio do formulário (WhatsApp)
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
+
+    let message = "Avaliação do Projeto Final:\n\n";
+    let totalScoreForWhatsapp = 0;
+
+    const criteria = [
+      "1. Título e Descrição da Página",
+      "2. Estrutura dos Produtos (Imagem, Nome, Descrição)",
+      "3. Uso de HTML Semântico e Navegação",
+      "4. Tabela de Preços ou Funcionalidade Equivalente",
+      "5. Formulário de Cadastro",
+      "6. Otimização para SEO e Acessibilidade",
+      "7. Estilização e Responsividade",
+      "8. Qualidade e Estrutura do Código"
+    ];
+
+    scoreInputs.forEach((input, index) => {
+      const score = input.value;
+      const commentId = input.id.replace('_score', '_comment');
+      const commentElement = document.getElementById(commentId);
+      const comment = commentElement ? commentElement.value.trim() : "Nenhum comentário.";
+
+      totalScoreForWhatsapp += parseInt(score);
+
+      message += `${criteria[index]}:\n`;
+      message += `   Pontuação: ${score}/100\n`;
+      message += `   Comentários: ${comment || "Nenhum."}\n\n`; // Adiciona "Nenhum" se o comentário estiver vazio
+    });
+
+    const finalAverage = (totalScoreForWhatsapp / criteria.length).toFixed(2);
+    message += `Média Final do Projeto: ${finalAverage}\n\n`;
+    message += "Avaliação enviada via formulário digital.";
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "5511976561347"; // **Mude para o seu número de WhatsApp**
+
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
+  });
+
+  // Event listener para o botão de limpar formulário
+  form.addEventListener('reset', function () {
+    // Delay para permitir que o reset padrão do input[type="range"] ocorra
+    setTimeout(() => {
+      scoreInputs.forEach((input, index) => {
+        updateScoreDisplay(input, scoreOutputs[index]);
+      });
+      calculateFinalAverage();
+    }, 50); // Pequeno atraso para garantir que os valores padrão sejam carregados antes de recalcular
+  });
+
+  // Calcula a média inicial ao carregar o formulário
+  calculateFinalAverage();
 }
 
 // ... (Resto do seu include.js, incluindo carregarPagina e DOMContentLoaded) ...
@@ -614,5 +614,3 @@ function carregarPagina(pagina) {
     })
     .catch(error => console.error('Erro ao carregar página:', error));
 }
-
-// ... (Resto do seu include.js, incluindo DOMContentLoaded) ...
